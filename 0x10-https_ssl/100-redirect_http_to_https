@@ -34,11 +34,11 @@ defaults
 
 frontend myfrontend
         bind *:80
-        bind *:443 ssl crt /etc/haproxy/certs/umohpyro.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/idaraekong.tech.pem
 	redirect scheme https if !{ ssl_fc }
 	default_backend webservers
 
 backend webservers
         balance roundrobin
-        server 93394-web-01 54.197.82.23:80 check
-        server 93394-web-02 18.207.112.232:80 check
+        server 135000-web-01 100.27.0.105:80 check
+        server 135000-web-02 100.24.238.42:80 check
